@@ -1,0 +1,90 @@
+<body>
+  <header>
+    <div class="contacto">
+      <div class="correo">
+        <span>correo@correo.com</span>
+        <img
+          src="/img/email.png"
+          width="15"
+          height="15"
+          style="margin-left: 10px;"
+        />
+      </div>
+      <div class="telefono">
+        <span>(0000) 000000 / (0000) 000000</span>
+        <img
+          src="/img/telefono.png"
+          width="15"
+          height="15"
+          style="margin-left: 10px;"
+        />
+      </div>
+    </div>
+    <div class="container">
+      <p class="logo">M & B ASOCIADOS</p>
+      <nav>
+        <a href="/Home">Inicio</a>
+        <a href="/SobreNosotros">Sobre Nosotros</a>
+        <a href="Especialidades">Especialidades</a>
+        <a href="/Oficinas">Oficinas</a>
+        <a href="/Contactenos">Contactenos</a>
+      </nav>
+    </div>
+  </header>
+</body>
+
+<style>
+  body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+  }
+
+  span{
+    font-size: small;
+  }
+
+  header {
+    background-color: rgb(245, 245, 245);
+  }
+
+  header .contacto {
+    gap: 30px;
+    background-color: rgba(101, 104, 108, 0.3922);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 7px;
+  }
+
+  header .logo {
+    margin: 0;
+    padding: 25px 30px;
+    font-weight: bold;
+    font-size: 1.6em;
+    color: rgba(101, 104, 108, 1);
+  }
+
+  header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+  }
+
+  header a {
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+  }
+
+  header a:hover {
+    color: rgba(155, 158, 161, 1);
+  }
+</style>
