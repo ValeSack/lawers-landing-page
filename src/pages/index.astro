@@ -1,0 +1,324 @@
+---
+import Card from "../components/Card.astro";
+import CircleImg from "../components/CircleImg.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <section id="hero">
+    <div class="home">
+      <div class="transparent-box">
+        <h1>Nos centramos en <br /> sus derechos</h1>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre-nosotros">
+    <div class="nosotros">
+      <h3>Sobre Nosotros</h3>
+      <CircleImg />
+    </div>
+    <div class="container">
+      <div class="img-container">
+        <img src="img/home.jpg" alt="home" class="responsive-img" />
+      </div>
+      <div class="nos">
+        <p>
+          “Somos una empresa que brinda servicios profesionales en el campo
+          jurídico y contable, nos enfocamos en dar una solución rápida y
+          nuestra prioridad es la satisfacción de los clientes”
+        </p>
+        <a href="/sobre-nosotros" class="button">
+          <button>Leer más...</button>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="especialidades">
+    <div class="spe">
+      <h3>Especializaciones</h3>
+      <CircleImg />
+    </div>
+    <div class="container">
+      <div class="card1">
+        <Card
+          title="NIÑES Y ADOLECENCIA"
+          href="/Especializaciones/niñes&adolecencia"
+        />
+        <Card title="PENALES" href="/Especializaciones/penales" />
+      </div>
+      <div class="card2">
+        <Card
+          title="PENALES ESPECIALES"
+          href="/Especializaciones/penales-especiales"
+        />
+      </div>
+    </div>
+    <div class="ver-mas">
+      <a href="/especializaciones" class="button">
+        <button>Ver mas</button>
+      </a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  #hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    color: white;
+    background-image: linear-gradient(
+        0deg,
+        rgb(0, 0, 0, 0.5),
+        rgb(0, 0, 0, 0.5)
+      ),
+      url("img/hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  #hero h1 {
+    color: white;
+    font-weight: 500;
+  }
+
+  #hero .transparent-box {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 150px;
+    border-radius: 10px;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  #hero .home {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  #hero .transparent-box h1 {
+    font-size: 3em;
+    position: relative;
+    margin: 0;
+    padding-bottom: 10px;
+    border-bottom: 3px solid rgb(125, 126, 128);
+    text-align: center;
+  }
+
+  /* Estilos específicos para la sección "Sobre Nosotros" */
+  #sobre-nosotros .nosotros {
+    text-align: center;
+    padding: 15px;
+  }
+
+  .responsive-img {
+    width: 800px;
+    height: 400px;
+    background-size: cover;
+  }
+
+  #sobre-nosotros .container {
+    padding: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 50px;
+    gap: 20px;
+    text-align: center;
+    background-color: rgba(101, 104, 108, 0.71);
+  }
+
+  #sobre-nosotros h3 {
+    font-family: "Lora", sans-serif;
+    font-weight: 590;
+    font-size: 2em;
+    position: relative;
+  }
+
+  #sobre-nosotros p {
+    font-size: larger;
+    margin: 50px;
+  }
+
+  #sobre-nosotros .img-container {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Estilos específicos para la sección "Especialidades" */
+  #especialidades {
+    align-items: center;
+  }
+
+  #especialidades .spe {
+    text-align: center;
+    padding: 5px;
+    position: relative;
+  }
+
+  #especialidades .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 5px;
+  }
+
+  .card1 {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+  }
+
+  #especialidades h3 {
+    font-family: "Lora", sans-serif;
+    font-weight: 590;
+    font-size: 2em;
+    position: relative;
+  }
+
+  #especialidades h2 {
+    font-weight: 590;
+    font-size: 2em;
+    position: relative;
+    margin-bottom: 50px;
+    color: white;
+  }
+
+  #especialidades .ver-mas {
+    text-align: center;
+    margin: 50px;
+    font-size: 1.3em;
+    font-weight: 500;
+  }
+
+  @media (max-width: 430px) {
+    .responsive-img {
+      display: none;
+    }
+
+    #hero {
+    height: 50vh;
+  }
+
+
+    #hero .transparent-box {
+      padding: 50px 20px;
+    }
+
+    #hero .transparent-box h1 {
+      font-size: 1.9em;
+    }
+
+    #sobre-nosotros .container {
+      flex-direction: column;
+    }
+
+    #sobre-nosotros .nos {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 20px;
+    }
+
+    #especialidades .container {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .card1 {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    #especialidades .spe {
+      margin: 50px;
+    }
+
+    #especialidades .ver-mas {
+      font-size: 1.2em;
+    }
+  }
+
+  @media (min-width: 540px) and (max-width: 912px) {
+    #hero .transparent-box {
+      padding: 100px;
+    }
+
+    .responsive-img {
+      display: none;
+    }
+
+    #hero .transparent-box h1 {
+      font-size: 2em;
+    }
+
+    #sobre-nosotros .container {
+      flex-direction: column;
+    }
+
+    #sobre-nosotros .nos {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 20px;
+    }
+
+    #especialidades .container {
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .card1 {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    #especialidades .ver-mas {
+      font-size: 1.2em;
+    }
+  }
+
+  @media (min-width: 1024px) and (max-width: 1280px) {
+    .responsive-img {
+      display: flex;
+      width: 600px;
+      height: 450px;
+    }
+
+    #hero .transparent-box h1 {
+      font-size: 2em;
+    }
+
+    #sobre-nosotros .nos {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 20px;
+    }
+
+    #especialidades .container {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .card1 {
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
+    }
+
+    #especialidades .ver-mas {
+      font-size: 1.2em;
+    }
+  }
+</style>

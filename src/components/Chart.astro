@@ -1,0 +1,56 @@
+---
+interface Props {
+  header:string;
+  title: string;
+  subTitle: string;
+  text: string;
+}
+
+const { subTitle, title, text, header } = Astro.props;
+---
+
+<div class="chart">
+  <h2>{header}</h2>
+  <h3>{title}</h3>
+  <h4>Contacto al tel: {subTitle}</h4>
+  <h4>{text}</h4>
+</div>
+
+<style>
+  .chart {
+    background-color: rgba(34, 53, 85, 0.55);
+    justify-content: center;
+    padding: 50px;
+    text-align: center;
+    width: auto;
+    border-radius: 20px;
+    color: rgba(252, 247, 247, 1);
+    overflow-wrap: break-word; 
+  }
+
+  .chart h5 {
+    max-width: 100%; 
+    white-space: normal; 
+    word-break: break-word;
+  }
+
+  @media (max-width: 1024px) {
+
+    .chart {
+      width: 350px;
+      padding: 30px;
+    }
+
+    h2 {
+      font-size: 1.5em;
+    }
+
+    h3{
+      font-size: 1.2em;
+    }
+
+    h4 {
+      font-size: 1em;
+    }
+  }
+</style>

@@ -1,0 +1,140 @@
+---
+import CircleImg from "../components/CircleImg.astro";
+import SobreNosCard from "../components/SobreNosCard.astro";
+import TableHomePage from "../components/TableHomePage.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <TableHomePage title="Sobre Nosotros" subTitle="Inicio/ Sobre Nosotro" />
+  <section id="nosotros">
+    <div class="container">
+      <div class="info">
+        <h2 class="h2">Quienes Somos</h2>
+        <p>
+          Atendemos a particulares y empresas, centrándonos en la mejor solución
+          posible y deseable para cada caso. Cada cliente es único y debe
+          recibir la máxima atención.
+        </p>
+
+        <p>
+          Nuestro objetivo no es sólo garantizar que los derechos de nuestros
+          clientes sean reconocidos y respetados, sino también que lo sean lo
+          antes posible, proporcionándoles todo el apoyo necesario a lo largo
+          del proceso, con la transparencia indispensable.
+        </p>
+      </div>
+      <div class="img-container">
+        <img
+          src="img/sobrenosImg.jpg"
+          alt="sobreNosotros"
+          width="800"
+          height="400"
+          class="responsive-img"
+        />
+      </div>
+    </div>
+  </section>
+  <section id="equipo">
+    <div class="team">
+      <h1 class="h1">Equipo</h1>
+      <CircleImg />
+    </div>
+    <div class="agentes">
+      <SobreNosCard
+        img="img/home.jpg"
+        nombre="DR. ANTONIO"
+        apellido="BENITEZ"
+        text="Estudiante de Derecho en prácticas en la FADI (Facultad de Derecho de Sorocaba). Tiene experiencia en Derecho Penal y Derecho Penal, habiendo trabajado durante dos años con Jueces del Tribunal de Justicia de São Paulo. "
+      />
+      <SobreNosCard
+        img="img/home.jpg"
+        nombre="DRA. MERCEDES"
+        apellido="MARECO"
+        text="Estudiante de Derecho en prácticas en la FADI (Facultad de Derecho de Sorocaba). Tiene experiencia en Derecho Penal y Derecho Penal, habiendo trabajado durante dos años con Jueces del Tribunal de Justicia de São Paulo. "
+      />
+      <SobreNosCard
+        img="img/home.jpg"
+        nombre="LIC. LILIAN"
+        apellido="CABRERA"
+        text="Estudiante de Derecho en prácticas en la FADI (Facultad de Derecho de Sorocaba). Tiene experiencia en Derecho Penal y Derecho Penal, habiendo trabajado durante dos años con Jueces del Tribunal de Justicia de São Paulo. "
+      />
+    </div>
+  </section>
+  <div class="contac">
+    <a href="/contactenos" class="button">
+      <button>Contacte con uno de nuestros agentes</button>
+    </a>
+  </div>
+</Layout>
+
+<style>
+  .h2 {
+    font-size: 2em;
+    font-weight:  590;
+  }
+
+  .h1{
+    font-size: 2.7em;
+    font-weight:  500;
+  }
+
+  #nosotros .container {
+    margin: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #nosotros .info {
+    margin: 20px;
+  }
+
+  .responsive-img {
+    border-radius: 20px;
+  }
+
+  #equipo .team {
+    gap: 10px;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+  }
+
+  #equipo .agentes {
+    gap: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contac{
+    text-align: center;
+    margin: 10px;
+    font-size: 1em;
+    font-weight: 500;
+  }
+
+  @media (max-width: 912px) {
+
+    #equipo .agentes {
+      flex-direction: column;
+    }
+
+    .responsive-img {
+      display: none;
+    }
+  }
+
+  @media (min-width: 1024px) and (max-width: 1280px) {
+    .responsive-img {
+      display: none;
+    }
+    
+    #equipo .agentes {
+      flex-direction: column;
+    }
+  }
+</style>

@@ -1,0 +1,146 @@
+---
+import Card from "../../components/Card.astro";
+import CircleImg from "../../components/CircleImg.astro";
+import TableHomePage from "../../components/TableHomePage.astro";
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout>
+  <TableHomePage
+    title="Especializaciones"
+    subTitle="Especializaciones/ Civil"
+  />
+  <div class="info">
+    <div class="titulo">
+      <h3>Casos civiles</h3>
+    </div>
+    <div class="parrafo">
+      <p>
+        En casos <strong>civiles</strong>, brindamos asesoría y representación
+        en una amplia gama de asuntos legales, desde disputas contractuales
+        hasta cuestiones de propiedad.
+      </p>
+      <p>
+        En situaciones de <strong>sucesiones</strong>, ayudamos a nuestros
+        clientes a gestionar la distribución de bienes y derechos de una persona
+        fallecida, asegurando que se cumplan las últimas voluntades y se
+        respeten los derechos de los herederos.
+      </p>
+      <p>
+        En casos de <strong>divorcio</strong>, proporcionamos apoyo legal para
+        la disolución del matrimonio, incluyendo la negociación de acuerdos
+        sobre bienes, manutención y custodia de los hijos.
+      </p>
+      <p>
+        Durante los procesos de <strong>disolución</strong> de sociedades o asociaciones,
+        asistimos en la liquidación de activos y la resolución de deudas, garantizando
+        que el proceso se lleve a cabo de manera justa y ordenada.
+      </p>
+      <p>
+        En el contexto de <strong>juicio ejecutivo</strong>, representamos a
+        nuestros clientes en la ejecución de deudas reconocidas por sentencia o
+        documento público, asegurando que se cumplan las obligaciones
+        financieras.
+      </p>
+      <p>
+        En casos de <strong>embargo</strong> y <strong>secuestro</strong>,
+        trabajamos para proteger los derechos de nuestros clientes, ya sea
+        solicitando estas medidas cautelares para asegurar el cumplimiento de
+        obligaciones o defendiendo a quienes se enfrentan a ellas.
+      </p>
+      <p>
+        En situaciones de <strong>interdictos</strong>, intervenimos para
+        proteger la posesión y el uso de bienes inmuebles, asegurando que
+        nuestros clientes mantengan o recuperen su control sobre la propiedad en
+        disputa.
+      </p>
+    </div>
+  </div>
+  <div class="other">
+    <h2>Otras especializaciones</h2>
+    <CircleImg />
+  </div>
+  <section>
+    <div class="card">
+      <Card
+        href="/Especializaciones/niñes&adolecencia"
+        title="NIÑES Y ADOLECENCIA"
+      />
+      <Card href="/Especializaciones/penales" title="PENALES" />
+      <Card
+        href="/Especializaciones/penales-especiales"
+        title="PENALES ESPECIALES"
+      />
+    </div>
+    <div class="ver-mas">
+      <a href="/especializaciones" class="button">
+        <button>Ver mas</button>
+      </a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px;
+    gap: 20px;
+  }
+
+  .parrafo {
+    width: 900px;
+  }
+
+  .titulo {
+    color: rgba(155, 158, 161, 0.93);
+  }
+
+  h3 {
+    font-size: 2.5em;
+  }
+
+  p {
+    font-size: 1.5em;
+    color: rgba(106, 104, 104, 1);
+    text-align: left;
+  }
+
+  .other {
+    text-align: center;
+  }
+
+  .card {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ver-mas {
+    margin: 20px;
+    text-align: center;
+  }
+
+  @media (max-width: 1024px) {
+
+    .card {
+      flex-direction: column;
+    }
+
+    h3 {
+      font-size: 1.8em;
+    }
+    .parrafo {
+      width: 100%;
+    }
+    p {
+      font-size: 1.1em;
+      text-align: center;
+    }
+  }
+</style>

@@ -1,0 +1,130 @@
+---
+import Card from "../../components/Card.astro";
+import CircleImg from "../../components/CircleImg.astro";
+import TableHomePage from "../../components/TableHomePage.astro";
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout>
+  <TableHomePage
+    title="Especializaciones"
+    subTitle="Especializaciones/ Niñes y adolecencia"
+  />
+  <div class="info">
+    <div class="titulo">
+      <h3>Niñes y adolecencia</h3>
+    </div>
+    <div class="parrafo">
+      <p>
+        Como abogados jugamos un papel crucial en la protección de los derechos
+        y el bienestar de los niños y adolescentes. Representamos a los menores
+        para asegurar que reciban el respaldo y la justicia necesarios en cada
+        caso.
+      </p>
+      <p>
+        En <strong>asistencias alimenticias</strong>, garantizamos que los menores reciban el
+        apoyo financiero de sus padres o tutores. Presentamos demandas para
+        establecer o modificar la manutención y aseguramos que los pagos sean
+        puntuales. Trabajamos para demostrar la necesidad del menor y la
+        capacidad de pago del responsable, cubriendo sus necesidades básicas
+        como alimentación, educación y salud.
+      </p>
+      <p>
+        En casos de <strong>guarda</strong>, intervenimos en procesos judiciales para determinar
+        con quién vivirán los menores, siempre buscando su mejor interés. Esto
+        puede implicar disputas familiares, donde presentamos pruebas y
+        argumentos para garantizar la seguridad y estabilidad del menor.
+      </p>
+      <p>
+        En situaciones de <strong>tutela</strong>, gestionamos los procedimientos legales para
+        nombrar a un tutor cuando los padres no pueden cumplir con sus
+        responsabilidades. Defendemos los derechos de los menores, asegurando
+        que estén en un entorno seguro y estable en todo momento.
+      </p>
+    </div>
+  </div>
+  <div class="other">
+    <h2>Otras especializaciones</h2>
+    <CircleImg />
+  </div>
+  <section>
+    <div class="card">
+      <Card
+        href="/Especializaciones/penales"
+        title="PENALES"
+      />
+      <Card href="/Especializaciones/penales-especiales" title="PENALES ESPECIALES" />
+      <Card href="/Especializaciones/civil" title="CIVIL" />
+    </div>
+    <div class="ver-mas">
+      <a href="/especializaciones" class="button">
+        <button>Ver mas</button>
+      </a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px;
+    gap: 20px;
+  }
+
+  .parrafo {
+    width: 900px;
+  }
+
+  .titulo {
+    color: rgba(155, 158, 161, 0.93);
+  }
+
+  h3 {
+    font-size: 2.5em;
+  }
+
+  p {
+    font-size: 1.5em;
+    color: rgba(106, 104, 104, 1);
+    text-align: left;
+  }
+
+  .other {
+    text-align: center;
+  }
+
+  .card {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ver-mas {
+    margin: 20px;
+    text-align: center;
+  }
+
+  @media (max-width: 1024px) {
+
+    .card {
+      flex-direction: column;
+    }
+
+    h3 {
+      font-size: 1.8em;
+    }
+    .parrafo {
+      width: 100%;
+    }
+    p {
+      font-size: 1.1em;
+      text-align: center;
+    }
+  }
+</style>

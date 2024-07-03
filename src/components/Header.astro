@@ -1,90 +1,277 @@
-<body>
-  <header>
-    <div class="contacto">
-      <div class="correo">
-        <span>correo@correo.com</span>
-        <img
-          src="/img/email.png"
-          width="15"
-          height="15"
-          style="margin-left: 10px;"
-        />
-      </div>
-      <div class="telefono">
-        <span>(0000) 000000 / (0000) 000000</span>
-        <img
-          src="/img/telefono.png"
-          width="15"
-          height="15"
-          style="margin-left: 10px;"
-        />
-      </div>
+---
+import Hamburger from "./Hamburger.astro";
+
+interface NavItem {
+  href: string;
+  label: string;
+}
+
+interface Props {
+  navItems: NavItem[];
+}
+
+const { navItems } = Astro.props;
+
+const isCurrentPage = (href: string): boolean => Astro.url.href === href;
+---
+
+<header>
+  <div class="header-contacto">
+    <div class="contacto-correo">
+      <img class="img-container" src="/img/email.png" width="15" height="15" />
+      <span class="span-text">correo@correo.com</span>
     </div>
-    <div class="container">
-      <p class="logo">M & B ASOCIADOS</p>
-      <nav>
-        <a href="/Home">Inicio</a>
-        <a href="/SobreNosotros">Sobre Nosotros</a>
-        <a href="Especialidades">Especialidades</a>
-        <a href="/Oficinas">Oficinas</a>
-        <a href="/Contactenos">Contactenos</a>
+    <div class="contacto-telefono">
+      <img src="/img/telefono.png" width="15" height="15" />
+      <span>(982) 506890 / (0000) 000000 / (0000) 000000</span>
+    </div>
+  </div>
+  <div class="header-container">
+    <div class="header-component">
+      <div class="component">
+        <div class="hamburger-container">
+          <Hamburger />
+        </div>
+        <div class="component-logo">
+          <h1 class="component-logo1">Lex Numerica</h1>
+          <h3 class="component-logo2">Estudio jurídico y contable</h3>
+        </div>
+      </div>
+      <nav class="desktop-menu">
+        {
+          navItems.map((item) => (
+            <a class="link" href={item.href}>
+              {item.label}
+            </a>
+          ))
+        }
       </nav>
     </div>
-  </header>
-</body>
+  </div>
+</header>
+<div class="menu-container">
+  <nav class="menu">
+    {
+      navItems.map((item) => (
+        <a
+          class={isCurrentPage(item.href) ? "current-page" : ""}
+          href={item.href}
+        >
+          {item.label}
+        </a>
+      ))
+    }
+  </nav>
+</div>
 
 <style>
-  body {
-    font-family: "Montserrat", sans-serif;
-    margin: 0;
-  }
-
-  span{
-    font-size: small;
-  }
-
-  header {
-    background-color: rgb(245, 245, 245);
-  }
-
-  header .contacto {
-    gap: 30px;
-    background-color: rgba(101, 104, 108, 0.3922);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 7px;
-  }
-
-  header .logo {
-    margin: 0;
-    padding: 25px 30px;
-    font-weight: bold;
-    font-size: 1.6em;
+  a {
+    text-decoration: none;
     color: rgba(101, 104, 108, 1);
   }
 
-  header .container {
+  .header-container {
+    width: 100%;
+  }
+
+  .header-contacto {
+    background-color: rgb(168, 171, 175);
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    gap: 20px;
+    padding: 5px;
+    top: 0;
+  }
+
+  .component {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+  }
+
+  .desktop-menu {
+    display: flex;
     align-items: center;
+    justify-content: flex-end;
+    margin-right: 30px;
   }
 
-  header nav {
+  .header-component {
+    background-color: rgb(221, 219, 219);
+    color: rgba(101, 104, 108, 1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    width: 100%;
+  }
+
+  .component-logo {
+    margin: 15px 20px;
+    justify-content: start;
+  }
+
+  .component-logo1 {
+    margin: 0;
+    font-size: 2em;
+    font-weight: 590;
+  }
+
+  .component-logo2 {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: normal;
+  }
+
+  .link {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: rgb(43, 43, 44);
+    margin-left: 20px;
+    text-decoration: none;
+  }
+
+  .link:hover {
+    color: rgb(161, 151, 151);
+  }
+
+  .contacto-correo {
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    font-size: medium;
+    font-weight: normal;
+    margin-left: 20px;
+  }
+
+  .img-container {
+    margin-top: 5px;
+  }
+
+  .contacto-telefono {
+    align-items: center;
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    font-size: medium;
+    font-weight: normal;
+  }
+
+  /* Estilos adicionales para el hamburger y el menú */
+  .menu-container {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: rgb(221, 219, 219);
+    transition: left 0.3s ease;
+    z-index: 1000;
+  }
+
+  .menu {
+    gap: 10px;
     display: flex;
     flex-direction: column;
-    text-align: center;
-    padding-bottom: 25px;
-  }
-
-  header a {
-    padding: 5px 12px;
-    text-decoration: none;
+    margin: 40px;
+    font-size: large;
     font-weight: bold;
-    color: black;
   }
 
-  header a:hover {
-    color: rgba(155, 158, 161, 1);
+  .hamburger-container {
+    margin-top: 40px;
+    margin-left: 30px;
+  }
+
+  @media (max-width: 430px) {
+    .desktop-menu {
+      display: none;
+    }
+
+    .hamburger {
+      display: flex;
+    }
+
+    header .container {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    .component-logo {
+      justify-content: end;
+      /* margin: 15px 50%; */
+      text-align: center;
+      justify-content: center;
+      align-items: end;
+    }
+
+    .menu-container {
+      left: -250px;
+    }
+
+    .contacto-correo {
+      margin-left: 0;
+    }
+
+    .header-contacto {
+      flex-direction: column;
+      gap: 5px;
+      align-items: center;
+    }
+  }
+  @media (min-width: 540px) and (max-width: 912px) {
+    .desktop-menu {
+      display: none;
+    }
+
+    .hamburger {
+      display: flex;
+    }
+
+    header .container {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    .component-logo {
+      text-align: center;
+      justify-content: end;
+      align-items: end;
+    }
+
+    .menu-container {
+      left: -250px;
+    }
+
+    .contacto-correo {
+      margin-left: 0;
+    }
+
+    .header-contacto {
+      flex-direction: row;
+      gap: 20px;
+      align-items: center;
+    }
+  }
+
+  @media (min-width: 1024px) and (max-width: 1280px) {
+    .desktop-menu {
+      margin-right: 55px;
+      display: flex;
+    }
+
+    .hamburger {
+      display: none;
+    }
+    .component-logo {
+    margin: 15px 5px;
+    justify-content: start;
+  }
+    
   }
 </style>

@@ -1,7 +1,159 @@
 ---
+import Chart from "../components/Chart.astro";
+import CircleImg from "../components/CircleImg.astro";
+import TableHomePage from "../components/TableHomePage.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <h1>hola</h1>
+  <TableHomePage title="Oficinas" subTitle="Inicio/ Oficinas" />
+  <section id="text">
+    <div class="parrafo">
+      <h2>
+        Con oficinas en el norte y el este del pais, estamos en Itakyry, San
+        Alberto, <br /> Ciudad del Este y Hernandarias, realizamos consultoria en
+        todo el <br /> territorio nacional
+      </h2>
+    </div>
+  </section>
+  <section>
+    <div class="oficinas">
+      <h2>Nuestras Oficinas</h2>
+      <CircleImg />
+    </div>
+
+    <div class="chart-container">
+      <div class="chart1">
+        <Chart
+          header="Nuestro estudio jurídico en"
+          title="Ciudad del Este"
+          subTitle="(0000)000000"
+          text="Av. Hernandarias, km 6 1/2, barrio San Isidro"
+        />
+        <Chart
+          header="Nuestro estudio jurídico en"
+          title="Itakyry"
+          subTitle="(0000)000000"
+          text="Av. Hernandarias, km 6 1/2, barrio San Isidro"
+        />
+      </div>
+      <div class="chart2">
+        <Chart
+          header="Nuestra oficina de Contabilidad"
+          title="Itakyry"
+          subTitle="(0000)000000"
+          text="Av. Hernandarias, km 6 1/2, barrio San Isidro"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="contacto">
+    <div class="info">
+      <h2>Quiere agendar una reunion?</h2>
+      <h4>
+        Pongase en contacto con nosotros y lo atenderemos lo antes posible
+      </h4>
+    </div>
+    <a href="/contactenos" class="botton">
+      <button>Contactenos</button>
+    </a>
+  </section>
 </Layout>
+
+<style>
+  #text .parrafo {
+    text-align: center;
+    margin: 30px;
+    font-size: 0.9em;
+  }
+
+  h2 {
+    font-weight: normal;
+    font-size: 1.8em;
+    margin: 10px;
+  }
+
+  h4 {
+    font-weight: normal;
+    margin: 0;
+  }
+
+  .oficinas {
+    margin-top: 50px;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+  }
+
+  .chart-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    text-align: center;
+    align-items: center;
+    margin: 50px;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  .chart1 {
+    gap: 50px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+  }
+
+  .chart2 {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 50px;
+  }
+
+  .botton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 50px;
+    text-decoration: none;
+  }
+
+  @media (max-width: 912px) {
+    .chart-container {
+      flex-direction: column;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+
+    .chart1 {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    #text .parrafo {
+      font-size: 0.7em;
+    }
+  }
+
+  @media (min-width: 1024px) and (max-width: 1280px) {
+    #text .parrafo {
+      font-size: 0.9em;
+    }
+  }
+</style>

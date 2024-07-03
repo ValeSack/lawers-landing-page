@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "app-for-lawyers-and-notary-public",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -10,8 +10,18 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.10.2",
     "@astrojs/check": "^0.7.0",
+    "@astrojs/react": "^3.6.0",
+    "@emailjs/browser": "^4.3.3",
+    "@react-input/mask": "^1.2.5",
+    "@types/react": "^18.3.3",
+    "astro": "^4.10.2",
+    "hamburger-react": "^2.5.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-input-mask": "^2.0.4",
+    "react-input-mask-next": "^3.0.0-alpha.12",
+    "react-text-mask": "^5.5.0",
     "typescript": "^5.4.5"
   }
 }

@@ -1,0 +1,59 @@
+---
+interface Props {
+  title: string;
+  subTitle: string;
+}
+
+const { subTitle, title } = Astro.props;
+---
+
+<div class="table">
+  <div class="container">
+    <h2>
+      {title}
+    </h2>
+    <h4>
+      {subTitle}
+    </h4>
+  </div>
+</div>
+
+<style>
+  .table {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 230px;
+    width: 100%;
+    color: white;
+    background-image: linear-gradient(
+        0deg,
+        rgba(5, 33, 77, 0.342),
+        rgba(5, 33, 77, 0.342)
+        ),
+      url("/img/table-home-page.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 5% 20%;
+  }
+  .container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px;
+  }
+
+  h4{
+    font-size: 1em;
+    margin: 0;
+    font-weight: lighter;
+  }
+
+  h2{
+    font-size: 1.8em;
+    margin: 7px 0;
+    font-weight:normal;
+  }
+</style>

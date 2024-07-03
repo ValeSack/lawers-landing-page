@@ -1,0 +1,136 @@
+---
+import Card from "../../components/Card.astro";
+import CircleImg from "../../components/CircleImg.astro";
+import TableHomePage from "../../components/TableHomePage.astro";
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout>
+  <TableHomePage
+    title="Especializaciones"
+    subTitle="Especializaciones/ Penales especiales"
+  />
+  <div class="info">
+    <div class="titulo">
+      <h3>Casos penales especiales</h3>
+    </div>
+    <div class="parrafo">
+      <p>
+        En casos de <strong>penales especiales</strong>, ofrecemos asesoramiento
+        y representación en situaciones que requieren un conocimiento profundo
+        de normativas específicas y delitos complejos.
+      </p>
+      <p>
+        En situaciones de <strong>acción penal privada</strong>, asistimos a
+        nuestros clientes en la presentación y seguimiento de denuncias sin la
+        intervención del Ministerio Público, asegurando que se respete su
+        derecho a buscar justicia de manera autónoma.
+      </p>
+      <p>
+        En el contexto de <strong>querellas autónomas</strong>, apoyamos a las
+        víctimas a presentar y sostener su querella de manera independiente,
+        trabajando para lograr una resolución justa y adecuada.
+      </p>
+      <p>
+        Cuando se trata de <strong>imputación</strong>, preparamos y presentamos
+        las pruebas necesarias para establecer la responsabilidad penal del
+        imputado, garantizando que el proceso sea justo y transparente.
+      </p>
+      <p>
+        En la fase de <strong>acusación</strong>, formulamos los cargos de
+        manera clara y contundente, respaldados por evidencia sólida, para que
+        el caso tenga una base firme en el juicio.
+      </p>
+      <p>
+        Durante los <strong>juicios orales</strong>, representamos a nuestros
+        clientes ante el tribunal, presentando argumentos y evidencias de manera
+        efectiva para alcanzar el mejor resultado posible según las
+        circunstancias del caso.
+      </p>
+    </div>
+  </div>
+  <div class="other">
+    <h2>Otras especializaciones</h2>
+    <CircleImg />
+  </div>
+  <section>
+    <div class="card">
+      <Card
+        href="/Especializaciones/niñes&adolecencia"
+        title="NIÑES Y ADOLECENCIA"
+      />
+      <Card href="/Especializaciones/penales" title="PENALES" />
+      <Card href="/Especializaciones/civil" title="CIVIL" />
+    </div>
+    <div class="ver-mas">
+      <a href="/especializaciones" class="button">
+        <button>Ver mas</button>
+      </a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px;
+    gap: 20px;
+  }
+
+  .parrafo {
+    width: 900px;
+  }
+
+  .titulo {
+    color: rgba(155, 158, 161, 0.93);
+  }
+
+  h3 {
+    font-size: 2.5em;
+  }
+
+  p {
+    font-size: 1.5em;
+    color: rgba(106, 104, 104, 1);
+    text-align: left;
+  }
+
+  .other {
+    text-align: center;
+  }
+
+  .card {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ver-mas {
+    margin: 20px;
+    text-align: center;
+  }
+
+  @media (max-width: 1024px) {
+
+    .card {
+      flex-direction: column;
+    }
+
+    h3 {
+      font-size: 1.8em;
+    }
+    .parrafo {
+      width: 100%;
+    }
+    p {
+      font-size: 1.1em;
+      text-align: center;
+    }
+  }
+</style>

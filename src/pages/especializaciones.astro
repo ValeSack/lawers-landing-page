@@ -1,0 +1,66 @@
+---
+import Card from "../components/Card.astro";
+import CircleImg from "../components/CircleImg.astro";
+import TableHomePage from "../components/TableHomePage.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <TableHomePage
+    title="Especializaciones"
+    subTitle="Inicio/ Especializaciones"
+  />
+  <section>
+    <div class="titulo">
+      <h2 class="home-title">Especializaciones</h2>
+      <CircleImg />
+    </div>
+  </section>
+  <section id="cards">
+    <div class="card">
+      <Card href="/Especializaciones/niñes&adolecencia" title="NIÑES Y ADOLECENCIA" />
+      <Card href="/Especializaciones/penales" title="PENALES" />
+      <Card href="/Especializaciones/penales-especiales" title="PENALES ESPECIALES" />
+      <Card href="/Especializaciones/civil" title="CIVIL" />
+      <Card href="/Especializaciones/tramites-propiedades" title="TRAMITES RELACIONADOS A PROPIEDADES" />
+      <Card href="/Especializaciones/contables" title="CONTABLES" />
+      <Card href="/Especializaciones/administrativos" title="ADMINISTRATIVOS" />
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .titulo {
+    text-align: center;
+    margin: 50px;
+    gap: 50px;
+  }
+
+  .home-title{
+    font-family: 'Lora', sans-serif;
+    font-size: 2em;
+    font-weight: 500;
+  }
+
+  #cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  @media (max-width: 912px) {
+
+    #cards {
+      padding: 0;
+    }
+  }
+</style>

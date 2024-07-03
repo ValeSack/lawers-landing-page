@@ -1,0 +1,40 @@
+<div class="hamburger">
+  <span class="line"></span>
+  <span class="line"></span>
+  <span class="line"></span>
+</div>
+
+<style>
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .hamburger .line {
+    display: block;
+    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+    align-items: center;
+    margin-top: 2px;
+    background-color: rgba(34, 53, 85, 1);
+  }
+  @media (max-width: 430px) {
+    .hamburger {
+      display: flex;
+    }
+  }
+
+  @media (min-width: 540px) and (max-width: 912px) {
+    .hamburger {
+      display: flex;
+    }
+  }
+
+  @media (min-width: 1024px) and (max-width: 1280px) {
+    .hamburger {
+      display: none;
+    }
+  }
+</style>
