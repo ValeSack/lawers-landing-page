@@ -1,0 +1,152 @@
+---
+import Card from "../../components/Card.astro";
+import CircleImg from "../../components/CircleImg.astro";
+import TableHomePage from "../../components/TableHomePage.astro";
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout>
+  <TableHomePage
+    title="Especializaciones"
+    subTitle="Especializaciones/ Gestiones ante migraciones"
+  />
+  <div class="info">
+    <div class="titulo">
+      <h3>Gestiones ante migraciones</h3>
+    </div>
+    <div class="parrafo">
+      <p>
+        Ayudamos a extranjeros y empresas en la navegación del sistema
+        migratorio del país. Brindamos experiencia en <strong>
+          radicaciones y documentos de identidad a extranjeros</strong
+        >, asegurando que los extranjeros puedan regularizar su situación
+        migratoria y ejercer sus derechos conforme a la legislación vigente.
+      </p>
+      <p>
+        Asesoramos a nuestros clientes extranjeros en la obtención de permisos
+        de <strong> residencia temporal y permanente</strong>. Esto incluye la
+        preparación y presentación de la documentación requerida, seguimiento de
+        solicitudes y representación ante las autoridades migratorias para
+        asegurar que el proceso se realice de manera eficiente y conforme a la
+        ley.
+      </p>
+      <p>
+        Nos encargamos de la <strong
+          >renovación de permisos de residencia</strong
+        > para garantizar que nuestros clientes extranjeros mantengan su estatus
+        legal en el país. Asistimos en la recopilación de los documentos necesarios,
+        presentación de la solicitud de renovación y resolución de cualquier inconveniente
+        que pueda surgir durante el proceso.
+      </p>
+      <p>
+        En casos de que nuestros clientes deseen adquirir la <strong
+          >ciudadanía</strong
+        >, los asesoramos en el proceso de <strong>naturalización</strong>. Esto
+        implica la orientación sobre los requisitos legales, preparación de la
+        documentación, presentación de la solicitud y representación en las
+        audiencias pertinentes para obtener la ciudadanía.
+      </p>
+      <p>
+        Asesoramos a empresas y trabajadores extranjeros en la obtención de <strong
+          >visas de trabajo</strong
+        >. Esto incluye la gestión de todos los trámites necesarios para que los
+        empleados extranjeros puedan trabajar legalmente en el país, asegurando
+        el cumplimiento de las normativas laborales y migratorias.
+      </p>
+      <p>
+        Representamos a nuestros clientes extranjeros que buscan <strong
+          >asilo o refugio</strong
+        >, proporcionando asesoría sobre los procedimientos legales y ayudando a
+        preparar y presentar las solicitudes. Además, ofrecemos representación
+        en audiencias y apelaciones para proteger los derechos de los
+        solicitantes.
+      </p>
+    </div>
+  </div>
+  <div class="other">
+    <h2>Otras especializaciones</h2>
+    <CircleImg />
+  </div>
+  <section>
+    <div class="card">
+      <Card
+        href="/Especializaciones/niñes&adolecencia"
+        title="NIÑES Y ADOLECENCIA"
+      />
+      <Card href="/Especializaciones/penales" title="PENALES" />
+      <Card
+        href="/Especializaciones/penales-especiales"
+        title="CASOS PENALES ESPECIALES"
+      />
+    </div>
+    <div class="ver-mas">
+      <a href="/especializaciones" class="button">
+        <button>Ver mas</button>
+      </a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px;
+    gap: 20px;
+  }
+
+  .parrafo {
+    width: 900px;
+  }
+
+  .titulo {
+    color: rgba(155, 158, 161, 0.93);
+  }
+
+  h3 {
+    font-size: 2.5em;
+  }
+
+  p {
+    font-size: 1.4em;
+    color: rgba(106, 104, 104, 1);
+    text-align: left;
+  }
+
+  .other {
+    text-align: center;
+  }
+
+  .card {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ver-mas {
+    margin: 20px;
+    text-align: center;
+  }
+
+  @media (max-width: 1024px) {
+    .card {
+      flex-direction: column;
+    }
+
+    h3 {
+      font-size: 1.8em;
+    }
+    .parrafo {
+      width: 100%;
+    }
+    p {
+      font-size: 1.1em;
+      text-align: center;
+    }
+  }
+</style>

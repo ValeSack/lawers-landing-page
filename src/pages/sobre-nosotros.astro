@@ -12,23 +12,33 @@ import Layout from "../layouts/Layout.astro";
       <div class="info">
         <h2 class="h2">Quienes Somos</h2>
         <p>
-          Atendemos a particulares y empresas, centrándonos en la mejor solución
-          posible y deseable para cada caso. Cada cliente es único y debe
-          recibir la máxima atención.
+          Ofrecemos una amplia gama de servicios legales, incluyendo
+          asesoramiento en derecho de familia, derecho laboral y derecho
+          corporativo, así como representación en litigios y mediaciones.
         </p>
 
         <p>
-          Nuestro objetivo no es sólo garantizar que los derechos de nuestros
-          clientes sean reconocidos y respetados, sino también que lo sean lo
-          antes posible, proporcionándoles todo el apoyo necesario a lo largo
-          del proceso, con la transparencia indispensable.
+          En el ámbito contable, proveemos servicios de auditoría, planificación
+          fiscal, y contabilidad financiera para asegurar que sus operaciones
+          estén en plena conformidad con las regulaciones vigentes.
+        </p>
+        <p>
+          Proveemos servicios de auditoría, planificación fiscal, y contabilidad
+          financiera para asegurar que sus operaciones estén en plena
+          conformidad con las regulaciones vigentes.
+        </p>
+        <p>
+          Nos distinguimos por nuestro compromiso con la excelencia, la
+          integridad y la atención personalizada, trabajando estrechamente con
+          cada cliente para entender sus necesidades específicas y ofrecer
+          soluciones adaptadas a sus objetivos particulares.
         </p>
       </div>
       <div class="img-container">
         <img
           src="img/sobrenosImg.jpg"
           alt="sobreNosotros"
-          width="800"
+          width="650"
           height="400"
           class="responsive-img"
         />
@@ -43,21 +53,21 @@ import Layout from "../layouts/Layout.astro";
     <div class="agentes">
       <SobreNosCard
         img="img/home.jpg"
-        nombre="DR. ANTONIO"
-        apellido="BENITEZ"
-        text="Estudiante de Derecho en prácticas en la FADI (Facultad de Derecho de Sorocaba). Tiene experiencia en Derecho Penal y Derecho Penal, habiendo trabajado durante dos años con Jueces del Tribunal de Justicia de São Paulo. "
+        nombre="ANTONIO BENITEZ"
+        apellido="IRRAZABAL"
+        text="Egresado como abogado (2015) y oficial de Justicia (2015) en la Universidad Privada del Este. Especializacion en Didactica Universitaria en la UTCD. Oratoria (2013) en la UPE. Durante su formación, se destacó por su dedicación y compromiso académico, participando en diversas actividades y seminarios jurídicos. Actualmente ejerce como Oficial de Justicia. "
       />
       <SobreNosCard
         img="img/home.jpg"
-        nombre="DRA. MERCEDES"
-        apellido="MARECO"
-        text="Estudiante de Derecho en prácticas en la FADI (Facultad de Derecho de Sorocaba). Tiene experiencia en Derecho Penal y Derecho Penal, habiendo trabajado durante dos años con Jueces del Tribunal de Justicia de São Paulo. "
+        nombre="MERCEDES MARECO"
+        apellido="FERNANDEZ"
+        text="Egresada como abogada (2006) y notaria (2009) de la Universidad Católica Nuestra Señora de la Asunción. Especialización en Didáctica Universitaria por la Universidad Técnica de Comercialización y Desarrollo (2013). Máster en Derecho Civil y Procesal Civil por la Universidad Americana (2017). Postgrado en Ciencias de la Educación por la Universidad Nacional del Este."
       />
       <SobreNosCard
         img="img/home.jpg"
-        nombre="LIC. LILIAN"
+        nombre="LIC. LILIAN ROCIO"
         apellido="CABRERA"
-        text="Estudiante de Derecho en prácticas en la FADI (Facultad de Derecho de Sorocaba). Tiene experiencia en Derecho Penal y Derecho Penal, habiendo trabajado durante dos años con Jueces del Tribunal de Justicia de São Paulo. "
+        text="Egresada como Licenciada en Contabilidad en la UNE (2021). Cursos en Impuesto a la Renta Personal (2018), Impacto del Mercado de Valores en la Economía Nacional (2019), Desarrollo Socioeconómico del Paraguay (2019), Oratoria (2018) y Elaboración de Planillas Electrónicas (2017) en la UNE. Educación Financiera y Plan de Negocios (2018) Fundación Emprende Paraguay. "
       />
     </div>
   </section>
@@ -71,12 +81,12 @@ import Layout from "../layouts/Layout.astro";
 <style>
   .h2 {
     font-size: 2em;
-    font-weight:  590;
+    font-weight: 590;
   }
 
-  .h1{
+  .h1 {
     font-size: 2.7em;
-    font-weight:  500;
+    font-weight: 500;
   }
 
   #nosotros .container {
@@ -110,15 +120,14 @@ import Layout from "../layouts/Layout.astro";
     align-items: center;
   }
 
-  .contac{
+  .contac {
     text-align: center;
-    margin: 10px;
+    margin: 30px;
     font-size: 1em;
     font-weight: 500;
   }
 
   @media (max-width: 912px) {
-
     #equipo .agentes {
       flex-direction: column;
     }
@@ -132,7 +141,7 @@ import Layout from "../layouts/Layout.astro";
     .responsive-img {
       display: none;
     }
-    
+
     #equipo .agentes {
       flex-direction: column;
     }

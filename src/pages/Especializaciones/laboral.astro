@@ -8,44 +8,43 @@ import Layout from "../../layouts/Layout.astro";
 <Layout>
   <TableHomePage
     title="Especializaciones"
-    subTitle="Especializaciones/ Penales especiales"
+    subTitle="Especializaciones/ Laborales"
   />
   <div class="info">
     <div class="titulo">
-      <h3>Casos penales especiales</h3>
+      <h3>Laborales</h3>
     </div>
     <div class="parrafo">
       <p>
-        En casos de <strong>penales especiales</strong>, ofrecemos asesoramiento
-        y representación en situaciones que requieren un conocimiento profundo
-        de normativas específicas y delitos complejos.
+        En los casos <strong>laborales</strong> asesoramos y representamos
+        a empleados y empleadores en diversos aspectos relacionados con el derecho
+        laboral.
       </p>
       <p>
-        En situaciones de <strong>acción penal privada</strong>, asistimos a
-        nuestros clientes en la presentación y seguimiento de denuncias sin la
-        intervención del Ministerio Público, asegurando que se respete su
-        derecho a buscar justicia de manera autónoma.
+        Asesoramos en la redacción, revisión y negociación de <strong
+          >contratos laborales</strong
+        >, asegurando que cumplan con la legislación vigente y protejan los
+        derechos tanto del empleador como del empleado. Esto incluye contratos
+        de tiempo determinado, indefinido, y contratos para servicios
+        específicos.
       </p>
       <p>
-        En el contexto de <strong>querellas autónomas</strong>, apoyamos a las
-        víctimas a presentar y sostener su querella de manera independiente,
-        trabajando para lograr una resolución justa y adecuada.
+        Participamos en <strong>negociaciones colectivas</strong>, representando
+        a sindicatos o a empleadores en la negociación de convenios colectivos
+        de trabajo. Esto incluye la mediación de conflictos laborales y la
+        redacción de acuerdos que beneficien a ambas partes.
       </p>
       <p>
-        Cuando se trata de <strong>imputación</strong>, preparamos y presentamos
-        las pruebas necesarias para establecer la responsabilidad penal del
-        imputado, garantizando que el proceso sea justo y transparente.
+        Gestionamos <strong>reclamaciones salariales</strong>, asegurando que
+        los empleados reciban los salarios y beneficios a los que tienen
+        derecho. Asistimos en la presentación de demandas por salarios impagos,
+        horas extras y otros beneficios laborales.
       </p>
       <p>
-        En la fase de <strong>acusación</strong>, formulamos los cargos de
-        manera clara y contundente, respaldados por evidencia sólida, para que
-        el caso tenga una base firme en el juicio.
-      </p>
-      <p>
-        Durante los <strong>juicios orales</strong>, representamos a nuestros
-        clientes ante el tribunal, presentando argumentos y evidencias de manera
-        efectiva para alcanzar el mejor resultado posible según las
-        circunstancias del caso.
+        Asesoramos a empresas en el cumplimiento de normativas de
+        <strong>seguridad y salud ocupacional</strong>. Esto incluye la revisión de políticas
+        internas, la gestión de incidentes laborales y la representación en
+        casos de incumplimiento de las normativas de seguridad laboral.
       </p>
     </div>
   </div>
@@ -60,7 +59,10 @@ import Layout from "../../layouts/Layout.astro";
         title="NIÑES Y ADOLECENCIA"
       />
       <Card href="/Especializaciones/penales" title="PENALES" />
-      <Card href="/Especializaciones/civil" title="CIVIL" />
+      <Card
+        href="/Especializaciones/penales-especiales"
+        title="CASOS PENALES ESPECIALES"
+      />
     </div>
     <div class="ver-mas">
       <a href="/especializaciones" class="button">
@@ -117,7 +119,6 @@ import Layout from "../../layouts/Layout.astro";
   }
 
   @media (max-width: 1024px) {
-
     .card {
       flex-direction: column;
     }

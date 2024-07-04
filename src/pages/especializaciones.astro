@@ -20,11 +20,13 @@ import Layout from "../layouts/Layout.astro";
     <div class="card">
       <Card href="/Especializaciones/niñes&adolecencia" title="NIÑES Y ADOLECENCIA" />
       <Card href="/Especializaciones/penales" title="PENALES" />
-      <Card href="/Especializaciones/penales-especiales" title="PENALES ESPECIALES" />
+      <Card href="/Especializaciones/penales-especiales" title="CASOS PENALES ESPECIALES" />
       <Card href="/Especializaciones/civil" title="CIVIL" />
       <Card href="/Especializaciones/tramites-propiedades" title="TRAMITES RELACIONADOS A PROPIEDADES" />
       <Card href="/Especializaciones/contables" title="CONTABLES" />
       <Card href="/Especializaciones/administrativos" title="ADMINISTRATIVOS" />
+      <Card href="/Especializaciones/laboral" title="LABORALES" />
+      <Card href="/Especializaciones/migraciones" title="GESTIONES ANTE MIGRACIONES" />
     </div>
   </section>
 </Layout>
@@ -42,25 +44,10 @@ import Layout from "../layouts/Layout.astro";
     font-weight: 500;
   }
 
-  #cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
-  }
-
   .card {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 20px;
     justify-content: center;
-  }
-
-  @media (max-width: 912px) {
-
-    #cards {
-      padding: 0;
-    }
   }
 </style>

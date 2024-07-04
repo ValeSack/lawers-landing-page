@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { InputMask } from "@react-input/mask";
 import "../css/Correo.css";
 
 export const SendCorreo = () => {
@@ -23,13 +22,13 @@ export const SendCorreo = () => {
   function sendEmail(e) {
     e.preventDefault();
 
-    // if (name === "" || tel === "" || email === "" || message === "") {
-    //   setShowAlert({
-    //     type: "error",
-    //     message: "Complete todos los campos requeridos.",
-    //   });
-    //   return;
-    // }
+    if (name === "" || tel === "" || email === "" || message === "") {
+      setShowAlert({
+        type: "error",
+        message: "Complete todos los campos requeridos.",
+      });
+      return;
+    }
 
     const templateParams = {
       from_name: name,
@@ -40,7 +39,7 @@ export const SendCorreo = () => {
 
     emailjs
       .send(
-        "service_l4e9raa",
+        "service_9tcxkrp",
         "template_evjrtyp",
         templateParams,
         "qm_mpDDeD4fmo76dD"
@@ -69,6 +68,17 @@ export const SendCorreo = () => {
 
   return (
     <div className="cor-container">
+      <div className="alert-container">
+        {showAlert && (
+          <div
+            className={`alert ${
+              showAlert.type === "error" ? "alert-error" : "alert-success"
+            }`}
+          >
+            {showAlert.message}
+          </div>
+        )}
+      </div>
       <div className="correo-contacto">
         <div className="correo-podemos">
           <h3 className="correo-title">
@@ -96,11 +106,14 @@ export const SendCorreo = () => {
               value={name}
             />
             <input
-              required
               type="tel"
               value={tel}
-              placeholder="Telefono"
+              placeholder="Teléfono, solo numeros"
+              inputMode="numeric"
               onChange={(e) => setTel(e.target.value)}
+              pattern="[0-9]{4}[0-9]{3}[0-9]{3}"
+              maxLength="10"
+              required
             />
             <input
               required
@@ -121,17 +134,6 @@ export const SendCorreo = () => {
             </div>
           </form>
         </div>
-      </div>
-      <div className="alert-container">
-        {showAlert && (
-          <div
-            className={`alert ${
-              showAlert.type === "error" ? "alert-error" : "alert-success"
-            }`}
-          >
-            {showAlert.message}
-          </div>
-        )}
       </div>
     </div>
   );
