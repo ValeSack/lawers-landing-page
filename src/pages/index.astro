@@ -8,7 +8,11 @@ import Layout from "../layouts/Layout.astro";
   <section id="hero">
     <div class="home">
       <div class="transparent-box">
-        <h1>Nos centramos en proteger sus derechos <br /> y optimizar su situación contable.</h1>
+        <h1>
+          Nos centramos en proteger sus derechos <br /> y optimizar su situación
+          contable.
+        </h1>
+        <div class="line"></div>
       </div>
     </div>
   </section>
@@ -109,8 +113,13 @@ import Layout from "../layouts/Layout.astro";
     position: relative;
     margin: 0;
     padding-bottom: 10px;
-    border-bottom: 3px solid rgb(125, 126, 128);
     text-align: center;
+  }
+
+  .line{
+    position: relative;
+    border-bottom: 3px solid rgb(104, 104, 119);
+    width: 100%;
   }
 
   /* Estilos específicos para la sección "Sobre Nosotros" */
@@ -208,17 +217,24 @@ import Layout from "../layouts/Layout.astro";
     }
 
     #hero {
-    height: 50vh;
-  }
-
+      height: 50vh;
+    }
 
     #hero .transparent-box {
-      padding: 50px 20px;
+      padding: 40px 0;
+      max-width: 80%;
     }
 
     #hero .transparent-box h1 {
-      font-size: 1.9em;
+      font-size: 1.5em;
     }
+
+    .line{
+    margin-left: 50px;
+    position: relative;
+    border-bottom: 3px solid rgb(104, 104, 119);
+    width: 200px;
+  }
 
     #sobre-nosotros .container {
       flex-direction: column;
