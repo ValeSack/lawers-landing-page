@@ -108,7 +108,7 @@ export const SendCorreo = () => {
             <input
               type="tel"
               value={tel}
-              placeholder="Teléfono, solo numeros"
+              placeholder="Teléfono"
               inputMode="numeric"
               onChange={(e) => setTel(e.target.value)}
               pattern="[0-9]{4}[0-9]{3}[0-9]{3}"
