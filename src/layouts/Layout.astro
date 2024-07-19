@@ -43,16 +43,9 @@ const navItems = [
   h1 {
     font-family: "Lora", sans-serif;
   }
-  .header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    text-align: center;
-    z-index: 1000; /* Ensure it stays on top */
-  }
-
+ 
   main {
-    margin-top: 130px; /* Adjust based on header height */
+    margin-top: 130px;
     padding: 0;
   }
 
@@ -85,12 +78,8 @@ const navItems = [
   }
 
   @media (max-width: 1024px) {
-    .header {
-      position: static;
+    main{
+    margin-top: 160px;
     }
-
-    main {
-    margin-top: 0;
-  }
   }
 </style>

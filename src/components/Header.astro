@@ -23,7 +23,7 @@ const isCurrentPage = (href: string): boolean => Astro.url.href === href;
     </div>
     <div class="contacto-telefono">
       <img src="/img/telefono.png" width="15" height="15" />
-      <span>(0982) 506890 / (0985) 320314 /  (0975) 815073 </span>
+      <span>(0982) 506890 / (0985) 320314 / (0975) 815073 </span>
     </div>
   </div>
   <div class="header-container">
@@ -50,6 +50,7 @@ const isCurrentPage = (href: string): boolean => Astro.url.href === href;
   </div>
 </header>
 <div class="menu-container">
+  <!-- <h1 class="component-logo1">Lex Numerica</h1> -->
   <nav class="menu">
     {
       navItems.map((item) => (
@@ -65,6 +66,12 @@ const isCurrentPage = (href: string): boolean => Astro.url.href === href;
 </div>
 
 <style>
+  header{
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    overflow-x: hidden;
+  }
   a {
     text-decoration: none;
     color: rgba(101, 104, 108, 1);
@@ -160,6 +167,7 @@ const isCurrentPage = (href: string): boolean => Astro.url.href === href;
 
   /* Estilos adicionales para el hamburger y el menú */
   .menu-container {
+    margin-top: 164px;
     position: fixed;
     top: 0;
     left: -250px;
@@ -174,7 +182,8 @@ const isCurrentPage = (href: string): boolean => Astro.url.href === href;
     gap: 10px;
     display: flex;
     flex-direction: column;
-    margin: 40px;
+    margin-top: 30px;
+    margin-left: 40px;
     font-size: large;
     font-weight: bold;
   }
@@ -245,7 +254,8 @@ const isCurrentPage = (href: string): boolean => Astro.url.href === href;
     }
 
     .menu-container {
-      left: -250px;
+    margin-top: 140px;
+    left: -250px;
     }
 
     .contacto-correo {
